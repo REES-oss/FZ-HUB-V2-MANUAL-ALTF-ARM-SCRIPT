@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
 
 local FzHubV2 = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -38,7 +35,7 @@ local OptimizationButton = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local RejoinButton = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
-local KillsCountButton = Instance.new("TextButton")
+local TpButton = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local InformationFrame = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
@@ -47,11 +44,6 @@ local UICorner_17 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
-local KillsGainedFrame = Instance.new("Frame")
-local UICorner_18 = Instance.new("UICorner")
-local KillsGained = Instance.new("TextLabel")
-local Time = Instance.new("TextLabel")
-local _0000 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -66,7 +58,7 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
 MainFrame.BackgroundTransparency = 0.100
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(-0.406833321, 0, -0.165602759, 0)
+MainFrame.Position = UDim2.new(-0.443812132, 0, -0.0323981158, 0)
 MainFrame.Size = UDim2.new(0, 3586, 0, 984)
 MainFrame.Visible = false
 
@@ -77,7 +69,7 @@ KeySystemFrame.Parent = MainFrame
 KeySystemFrame.BackgroundColor3 = Color3.fromRGB(20, 17, 28)
 KeySystemFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KeySystemFrame.BorderSizePixel = 0
-KeySystemFrame.Position = UDim2.new(0.348577827, 0, 0.431910574, 0)
+KeySystemFrame.Position = UDim2.new(0.284160644, 0, 0.370934963, 0)
 KeySystemFrame.Size = UDim2.new(0, 374, 0, 210)
 
 UICorner_2.Parent = KeySystemFrame
@@ -313,19 +305,19 @@ RejoinButton.TextSize = 18.000
 
 UICorner_14.Parent = RejoinButton
 
-KillsCountButton.Name = "KillsCountButton"
-KillsCountButton.Parent = ScriptFrame
-KillsCountButton.BackgroundColor3 = Color3.fromRGB(120, 70, 180)
-KillsCountButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillsCountButton.BorderSizePixel = 0
-KillsCountButton.Position = UDim2.new(0.112980768, 0, 0.776679814, 0)
-KillsCountButton.Size = UDim2.new(0, 322, 0, 33)
-KillsCountButton.Font = Enum.Font.SourceSansBold
-KillsCountButton.Text = "Kills Count"
-KillsCountButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-KillsCountButton.TextSize = 18.000
+TpButton.Name = "TpButton"
+TpButton.Parent = ScriptFrame
+TpButton.BackgroundColor3 = Color3.fromRGB(120, 70, 180)
+TpButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpButton.BorderSizePixel = 0
+TpButton.Position = UDim2.new(0.112980768, 0, 0.776679814, 0)
+TpButton.Size = UDim2.new(0, 322, 0, 33)
+TpButton.Font = Enum.Font.SourceSansBold
+TpButton.Text = "Teleport"
+TpButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpButton.TextSize = 18.000
 
-UICorner_15.Parent = KillsCountButton
+UICorner_15.Parent = TpButton
 
 InformationFrame.Name = "InformationFrame"
 InformationFrame.Parent = ScriptFrame
@@ -387,58 +379,9 @@ TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextSize = 21.000
 TextLabel_7.TextWrapped = true
 
-KillsGainedFrame.Name = "KillsGainedFrame"
-KillsGainedFrame.Parent = ScriptFrame
-KillsGainedFrame.BackgroundColor3 = Color3.fromRGB(26, 29, 44)
-KillsGainedFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillsGainedFrame.BorderSizePixel = 0
-KillsGainedFrame.Position = UDim2.new(-0.78125, 0, 0.154393077, 0)
-KillsGainedFrame.Size = UDim2.new(0, 208, 0, 75)
-KillsGainedFrame.Visible = false
-
-UICorner_18.Parent = KillsGainedFrame
-
-KillsGained.Name = "KillsGained"
-KillsGained.Parent = KillsGainedFrame
-KillsGained.BackgroundColor3 = Color3.fromRGB(26, 29, 44)
-KillsGained.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillsGained.BorderSizePixel = 0
-KillsGained.Position = UDim2.new(0, 0, 0.127253622, 0)
-KillsGained.Size = UDim2.new(0, 208, 0, 30)
-KillsGained.Font = Enum.Font.SourceSansBold
-KillsGained.Text = "Kills: 0 (Gained:  0)"
-KillsGained.TextColor3 = Color3.fromRGB(255, 255, 255)
-KillsGained.TextSize = 21.000
-
-Time.Name = "Time"
-Time.Parent = KillsGainedFrame
-Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Time.BackgroundTransparency = 1.000
-Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Time.BorderSizePixel = 0
-Time.Position = UDim2.new(-0.0625, 0, 0.514339626, 0)
-Time.Size = UDim2.new(0, 200, 0, 50)
-Time.Font = Enum.Font.SourceSans
-Time.Text = "Time: "
-Time.TextColor3 = Color3.fromRGB(145, 145, 145)
-Time.TextSize = 18.000
-
-_0000.Name = "00:00"
-_0000.Parent = Time
-_0000.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_0000.BackgroundTransparency = 1.000
-_0000.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_0000.BorderSizePixel = 0
-_0000.Position = UDim2.new(0.182500005, 0, 0.0193713382, 0)
-_0000.Size = UDim2.new(0, 195, 0, 49)
-_0000.Font = Enum.Font.SourceSans
-_0000.Text = "00:00"
-_0000.TextColor3 = Color3.fromRGB(145, 145, 145)
-_0000.TextSize = 18.000
-
 -- Scripts:
 
-local function TMIRPV_fake_script() -- FzHubV2.LocalScript 
+local function YADNR_fake_script() -- FzHubV2.LocalScript 
 	local script = Instance.new('LocalScript', FzHubV2)
 
 	
@@ -503,8 +446,8 @@ local function TMIRPV_fake_script() -- FzHubV2.LocalScript
 	end
 	
 end
-coroutine.wrap(TMIRPV_fake_script)()
-local function VTROBMK_fake_script() -- KeySystemFrame.drag 
+coroutine.wrap(YADNR_fake_script)()
+local function GPJZ_fake_script() -- KeySystemFrame.drag 
 	local script = Instance.new('LocalScript', KeySystemFrame)
 
 	local UI = script.Parent
@@ -565,8 +508,8 @@ local function VTROBMK_fake_script() -- KeySystemFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(VTROBMK_fake_script)()
-local function PPBAL_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(GPJZ_fake_script)()
+local function KRJSBR_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	-- TextButton LocalScript
@@ -640,8 +583,8 @@ local function PPBAL_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(PPBAL_fake_script)()
-local function ZIZE_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(KRJSBR_fake_script)()
+local function HYCU_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -660,8 +603,8 @@ local function ZIZE_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZIZE_fake_script)()
-local function IVNR_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(HYCU_fake_script)()
+local function WFVB_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	
@@ -742,8 +685,8 @@ local function IVNR_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(IVNR_fake_script)()
-local function RVFNQBL_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(WFVB_fake_script)()
+local function MOYNB_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- LocalScript inside TextLabel
@@ -755,8 +698,8 @@ local function RVFNQBL_fake_script() -- TextLabel_2.LocalScript
 	textLabel.Text = "Welcome, " .. player.Name .. "to Fz Hub!"
 	
 end
-coroutine.wrap(RVFNQBL_fake_script)()
-local function FCHSYFT_fake_script() -- ScriptFrame.drag 
+coroutine.wrap(MOYNB_fake_script)()
+local function RPDJX_fake_script() -- ScriptFrame.drag 
 	local script = Instance.new('LocalScript', ScriptFrame)
 
 	local UI = script.Parent
@@ -817,8 +760,8 @@ local function FCHSYFT_fake_script() -- ScriptFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(FCHSYFT_fake_script)()
-local function WWVU_fake_script() -- InfoButton.LocalScript 
+coroutine.wrap(RPDJX_fake_script)()
+local function GJZW_fake_script() -- InfoButton.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton)
 
 	
@@ -863,8 +806,8 @@ local function WWVU_fake_script() -- InfoButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(WWVU_fake_script)()
-local function FVSLMM_fake_script() -- MinimizeButton.LocalScript 
+coroutine.wrap(GJZW_fake_script)()
+local function SWZTHU_fake_script() -- MinimizeButton.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton)
 
 	
@@ -879,8 +822,8 @@ local function FVSLMM_fake_script() -- MinimizeButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(FVSLMM_fake_script)()
-local function EYBGSOM_fake_script() -- AutoResetButton.LocalScript 
+coroutine.wrap(SWZTHU_fake_script)()
+local function OBIXH_fake_script() -- AutoResetButton.LocalScript 
 	local script = Instance.new('LocalScript', AutoResetButton)
 
 	
@@ -937,8 +880,8 @@ local function EYBGSOM_fake_script() -- AutoResetButton.LocalScript
 	button.Text = "AutoReset: OFF"
 	
 end
-coroutine.wrap(EYBGSOM_fake_script)()
-local function JJHFB_fake_script() -- SetSpawnButton.LocalScript 
+coroutine.wrap(OBIXH_fake_script)()
+local function ZPKVLI_fake_script() -- SetSpawnButton.LocalScript 
 	local script = Instance.new('LocalScript', SetSpawnButton)
 
 	local button = script.Parent
@@ -997,8 +940,8 @@ local function JJHFB_fake_script() -- SetSpawnButton.LocalScript
 	button.MouseButton1Click:Connect(toggleStuck)
 	
 end
-coroutine.wrap(JJHFB_fake_script)()
-local function WZQR_fake_script() -- OptimizationButton.LocalScript 
+coroutine.wrap(ZPKVLI_fake_script)()
+local function AYMDDRZ_fake_script() -- OptimizationButton.LocalScript 
 	local script = Instance.new('LocalScript', OptimizationButton)
 
 	local button = script.Parent
@@ -1028,22 +971,65 @@ local function WZQR_fake_script() -- OptimizationButton.LocalScript
 			end
 		end
 	
-		
+	
 		button.Text = "Optimization"
 		button.Active = false
 		button.AutoButtonColor = false
 	
-		
+	
 		StarterGui:SetCore("SendNotification", {
 			Title = "SYSTEM SAYS:",
-			Text = "Succesfully made your game smoother !", -- You can change this text
-			Duration = 4, -- how long the notification stays
+			Text = "Succesfully made your game smoother !", 
+			Duration = 4, --
 		})
 	end)
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	--- PROPERTY OF INF YIELD .. 2/3..2.2.12/.2.1..
 end
-coroutine.wrap(WZQR_fake_script)()
-local function SJSIUW_fake_script() -- RejoinButton.LocalScript 
+coroutine.wrap(AYMDDRZ_fake_script)()
+local function QHFPTW_fake_script() -- RejoinButton.LocalScript 
 	local script = Instance.new('LocalScript', RejoinButton)
 
 	local button = script.Parent
@@ -1058,208 +1044,23 @@ local function SJSIUW_fake_script() -- RejoinButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(SJSIUW_fake_script)()
-local function HYUYK_fake_script() -- KillsCountButton.LocalScript 
-	local script = Instance.new('LocalScript', KillsCountButton)
+coroutine.wrap(QHFPTW_fake_script)()
+local function WPFZSK_fake_script() -- TpButton.LocalScript 
+	local script = Instance.new('LocalScript', TpButton)
 
-	-- LocalScript inside your TextButton
+	
+	
 	local button = script.Parent
-	local frame = script.Parent.Parent:WaitForChild("KillsGainedFrame") -- change "Frame" if named differently
+	local targetPosition = Vector3.new(-139, 440, -391)
 	
-	-- optional: start hidden
-	frame.Visible = false
-	frame.BackgroundTransparency = 1
-	
-	-- tween service for smooth fade
-	local TweenService = game:GetService("TweenService")
-	
-	-- settings
-	local fadeTime = 0.3 -- seconds for fade animation
-	
-	-- function to fade in
-	local function fadeIn()
-		frame.Visible = true
-		local tween = TweenService:Create(frame, TweenInfo.new(fadeTime), {BackgroundTransparency = 0})
-		tween:Play()
-	end
-	
-	-- function to fade out
-	local function fadeOut()
-		local tween = TweenService:Create(frame, TweenInfo.new(fadeTime), {BackgroundTransparency = 1})
-		tween:Play()
-		tween.Completed:Connect(function()
-			frame.Visible = false
-		end)
-	end
-	
-	-- toggle on button click
-	local isVisible = false
 	button.MouseButton1Click:Connect(function()
-		isVisible = not isVisible
-		if isVisible then
-			fadeIn()
-		else
-			fadeOut()
-		end
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		-- Teleport the player
+		humanoidRootPart.CFrame = CFrame.new(targetPosition)
 	end)
 	
 end
-coroutine.wrap(HYUYK_fake_script)()
-local function SFSQOXY_fake_script() -- KillsGainedFrame.drag 
-	local script = Instance.new('LocalScript', KillsGainedFrame)
-
-	local UI = script.Parent
-	
-	local Dragging
-	local Input
-	local Start
-	local StartPosition
-	
-	function Lerp(A, B, M)
-		return A + (B - A) * M
-	end
-	
-	local LMPos
-	local LGPos
-	
-	local Speed = 10
-	
-	function Update(Time)
-		if not StartPosition then
-			return
-		end
-	
-		if not Dragging and LGPos then
-			UI.Position = UDim2.new(StartPosition.X.Scale, Lerp(UI.Position.X.Offset, LGPos.X.Offset, Time * Speed), StartPosition.Y.Scale, Lerp(UI.Position.Y.Offset, LGPos.Y.Offset, Time * Speed))
-			return
-		end
-	
-		local Delta = (LMPos - game:GetService("UserInputService"):GetMouseLocation())
-	
-		local xGoal = (StartPosition.X.Offset - Delta.X)
-		local yGoal = (StartPosition.Y.Offset - Delta.Y)
-	
-		LGPos = UDim2.new(StartPosition.X.Scale, xGoal, StartPosition.Y.Scale, yGoal)
-		UI.Position = UDim2.new(StartPosition.X.Scale, Lerp(UI.Position.X.Offset, xGoal, Time * Speed), StartPosition.Y.Scale, Lerp(UI.Position.Y.Offset, yGoal, Time * Speed))
-	end
-	
-	UI.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			Dragging = true
-			Start = input.Position
-			StartPosition = UI.Position
-			LMPos = game:GetService("UserInputService"):GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					Dragging = false
-				end
-			end)
-		end
-	end)
-	
-	UI.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			Input = input
-		end
-	end)
-	
-	game:GetService("RunService").Heartbeat:Connect(Update)
-end
-coroutine.wrap(SFSQOXY_fake_script)()
-local function MAWM_fake_script() -- KillsGained.LocalScript 
-	local script = Instance.new('LocalScript', KillsGained)
-
-	
-	local textLabel = script.Parent
-	
-	-- Settings
-	local resetTime = 2 -- seconds before gained kills reset
-	local totalKills = 0
-	local gainedKills = 0
-	
-	-- Function to update the label text
-	local function updateText()
-		textLabel.Text = string.format("Kills: %d | +%d", totalKills, gainedKills)
-	end
-	
-	updateText()
-	
-	-- Reset gained kills every 2 seconds
-	task.spawn(function()
-		while true do
-			task.wait(resetTime)
-			gainedKills = 0
-			updateText()
-		end
-	end)
-	
-	-- Simulate kill gains for testing (optional)
-	-- You can remove this and call the "addKill()" function manually later
-	task.spawn(function()
-		while true do
-			task.wait(math.random(1, 4)) -- random kill every 1–4 seconds
-			totalKills = 1
-			gainedKills = 1
-			updateText()
-		end
-	end)
-	
-	-- Function you can call from another script to add a kill:
-	-- Example:
-	-- game.Players.LocalPlayer.PlayerGui.ScreenGui.KillLabel.AddKill:Fire()
-	local AddKill = Instance.new("BindableEvent")
-	AddKill.Name = "AddKill"
-	AddKill.Parent = textLabel
-	
-	AddKill.Event:Connect(function()
-		totalKills = 1
-		gainedKills = 1
-		updateText()
-	end)
-	
-end
-coroutine.wrap(MAWM_fake_script)()
-local function FMEQMAP_fake_script() -- _0000.LocalScript 
-	local script = Instance.new('LocalScript', _0000)
-
-	
-	local label = script.Parent
-	local ui = label.Parent -- The parent frame/screen of the label; adjust if needed
-	
-	local runService = game:GetService("RunService")
-	
-	local timeElapsed = 0
-	local counting = false
-	
-	-- Format function (MM:SS)
-	local function formatTime(seconds)
-		local minutes = math.floor(seconds / 60)
-		local secs = seconds % 60
-		return string.format("%02d:%02d", minutes, secs)
-	end
-	
-	-- Update the text every frame
-	runService.Heartbeat:Connect(function(dt)
-		if counting then
-			timeElapsed += dt
-			label.Text = formatTime(math.floor(timeElapsed))
-		end
-	end)
-	
-	-- Detect when UI opens/closes
-	ui:GetPropertyChangedSignal("Visible"):Connect(function()
-		if ui.Visible then
-			counting = true
-		else
-			counting = false
-		end
-	end)
-	
-	-- Start counting if UI starts visible
-	if ui.Visible then
-		counting = true
-	end
-	
-end
-coroutine.wrap(FMEQMAP_fake_script)()
+coroutine.wrap(WPFZSK_fake_script)()
