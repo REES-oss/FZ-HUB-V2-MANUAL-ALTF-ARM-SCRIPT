@@ -1,3 +1,7 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local FzHubV2 = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -396,11 +400,10 @@ UICorner_18.Parent = KillsGainedFrame
 
 KillsGained.Name = "KillsGained"
 KillsGained.Parent = KillsGainedFrame
-KillsGained.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KillsGained.BackgroundTransparency = 1.000
+KillsGained.BackgroundColor3 = Color3.fromRGB(26, 29, 44)
 KillsGained.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KillsGained.BorderSizePixel = 0
-KillsGained.Position = UDim2.new(0, 0, 0.127253696, 0)
+KillsGained.Position = UDim2.new(0, 0, 0.127253622, 0)
 KillsGained.Size = UDim2.new(0, 208, 0, 30)
 KillsGained.Font = Enum.Font.SourceSansBold
 KillsGained.Text = "Kills: 0 (Gained:  0)"
@@ -435,7 +438,7 @@ _0000.TextSize = 18.000
 
 -- Scripts:
 
-local function TYSB_fake_script() -- FzHubV2.LocalScript 
+local function TMIRPV_fake_script() -- FzHubV2.LocalScript 
 	local script = Instance.new('LocalScript', FzHubV2)
 
 	
@@ -500,8 +503,8 @@ local function TYSB_fake_script() -- FzHubV2.LocalScript
 	end
 	
 end
-coroutine.wrap(TYSB_fake_script)()
-local function ARUQCP_fake_script() -- KeySystemFrame.drag 
+coroutine.wrap(TMIRPV_fake_script)()
+local function VTROBMK_fake_script() -- KeySystemFrame.drag 
 	local script = Instance.new('LocalScript', KeySystemFrame)
 
 	local UI = script.Parent
@@ -562,8 +565,8 @@ local function ARUQCP_fake_script() -- KeySystemFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(ARUQCP_fake_script)()
-local function NTORH_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(VTROBMK_fake_script)()
+local function PPBAL_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	-- TextButton LocalScript
@@ -637,8 +640,8 @@ local function NTORH_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(NTORH_fake_script)()
-local function QAFNR_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(PPBAL_fake_script)()
+local function ZIZE_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -657,8 +660,8 @@ local function QAFNR_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(QAFNR_fake_script)()
-local function CRFV_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(ZIZE_fake_script)()
+local function IVNR_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	
@@ -739,8 +742,8 @@ local function CRFV_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(CRFV_fake_script)()
-local function XCNHOYP_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(IVNR_fake_script)()
+local function RVFNQBL_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- LocalScript inside TextLabel
@@ -752,8 +755,8 @@ local function XCNHOYP_fake_script() -- TextLabel_2.LocalScript
 	textLabel.Text = "Welcome, " .. player.Name .. "to Fz Hub!"
 	
 end
-coroutine.wrap(XCNHOYP_fake_script)()
-local function DQGPI_fake_script() -- ScriptFrame.drag 
+coroutine.wrap(RVFNQBL_fake_script)()
+local function FCHSYFT_fake_script() -- ScriptFrame.drag 
 	local script = Instance.new('LocalScript', ScriptFrame)
 
 	local UI = script.Parent
@@ -814,8 +817,8 @@ local function DQGPI_fake_script() -- ScriptFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(DQGPI_fake_script)()
-local function BEDFEXW_fake_script() -- InfoButton.LocalScript 
+coroutine.wrap(FCHSYFT_fake_script)()
+local function WWVU_fake_script() -- InfoButton.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton)
 
 	
@@ -860,8 +863,8 @@ local function BEDFEXW_fake_script() -- InfoButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(BEDFEXW_fake_script)()
-local function NINDTCE_fake_script() -- MinimizeButton.LocalScript 
+coroutine.wrap(WWVU_fake_script)()
+local function FVSLMM_fake_script() -- MinimizeButton.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton)
 
 	
@@ -876,8 +879,8 @@ local function NINDTCE_fake_script() -- MinimizeButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(NINDTCE_fake_script)()
-local function PLVSYT_fake_script() -- AutoResetButton.LocalScript 
+coroutine.wrap(FVSLMM_fake_script)()
+local function EYBGSOM_fake_script() -- AutoResetButton.LocalScript 
 	local script = Instance.new('LocalScript', AutoResetButton)
 
 	
@@ -934,8 +937,8 @@ local function PLVSYT_fake_script() -- AutoResetButton.LocalScript
 	button.Text = "AutoReset: OFF"
 	
 end
-coroutine.wrap(PLVSYT_fake_script)()
-local function WNWHXM_fake_script() -- SetSpawnButton.LocalScript 
+coroutine.wrap(EYBGSOM_fake_script)()
+local function JJHFB_fake_script() -- SetSpawnButton.LocalScript 
 	local script = Instance.new('LocalScript', SetSpawnButton)
 
 	local button = script.Parent
@@ -994,8 +997,8 @@ local function WNWHXM_fake_script() -- SetSpawnButton.LocalScript
 	button.MouseButton1Click:Connect(toggleStuck)
 	
 end
-coroutine.wrap(WNWHXM_fake_script)()
-local function LPCQYF_fake_script() -- OptimizationButton.LocalScript 
+coroutine.wrap(JJHFB_fake_script)()
+local function WZQR_fake_script() -- OptimizationButton.LocalScript 
 	local script = Instance.new('LocalScript', OptimizationButton)
 
 	local button = script.Parent
@@ -1039,8 +1042,8 @@ local function LPCQYF_fake_script() -- OptimizationButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(LPCQYF_fake_script)()
-local function QUSVH_fake_script() -- RejoinButton.LocalScript 
+coroutine.wrap(WZQR_fake_script)()
+local function SJSIUW_fake_script() -- RejoinButton.LocalScript 
 	local script = Instance.new('LocalScript', RejoinButton)
 
 	local button = script.Parent
@@ -1055,8 +1058,8 @@ local function QUSVH_fake_script() -- RejoinButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(QUSVH_fake_script)()
-local function VIOMO_fake_script() -- KillsCountButton.LocalScript 
+coroutine.wrap(SJSIUW_fake_script)()
+local function HYUYK_fake_script() -- KillsCountButton.LocalScript 
 	local script = Instance.new('LocalScript', KillsCountButton)
 
 	-- LocalScript inside your TextButton
@@ -1101,8 +1104,8 @@ local function VIOMO_fake_script() -- KillsCountButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(VIOMO_fake_script)()
-local function AJFVKXE_fake_script() -- KillsGainedFrame.drag 
+coroutine.wrap(HYUYK_fake_script)()
+local function SFSQOXY_fake_script() -- KillsGainedFrame.drag 
 	local script = Instance.new('LocalScript', KillsGainedFrame)
 
 	local UI = script.Parent
@@ -1163,8 +1166,8 @@ local function AJFVKXE_fake_script() -- KillsGainedFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(AJFVKXE_fake_script)()
-local function PVLE_fake_script() -- KillsGained.LocalScript 
+coroutine.wrap(SFSQOXY_fake_script)()
+local function MAWM_fake_script() -- KillsGained.LocalScript 
 	local script = Instance.new('LocalScript', KillsGained)
 
 	
@@ -1216,8 +1219,8 @@ local function PVLE_fake_script() -- KillsGained.LocalScript
 	end)
 	
 end
-coroutine.wrap(PVLE_fake_script)()
-local function UFULZIS_fake_script() -- _0000.LocalScript 
+coroutine.wrap(MAWM_fake_script)()
+local function FMEQMAP_fake_script() -- _0000.LocalScript 
 	local script = Instance.new('LocalScript', _0000)
 
 	
@@ -1259,4 +1262,4 @@ local function UFULZIS_fake_script() -- _0000.LocalScript
 	end
 	
 end
-coroutine.wrap(UFULZIS_fake_script)()
+coroutine.wrap(FMEQMAP_fake_script)()
