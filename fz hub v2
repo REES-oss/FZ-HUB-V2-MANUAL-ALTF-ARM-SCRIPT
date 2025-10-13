@@ -376,7 +376,7 @@ TextLabel_5.TextSize = 27.000
 
 -- Scripts:
 
-local function QYEGKT_fake_script() -- KeySystemFrame.drag 
+local function PXMVLBI_fake_script() -- KeySystemFrame.drag 
 	local script = Instance.new('LocalScript', KeySystemFrame)
 
 	local UI = script.Parent
@@ -437,8 +437,8 @@ local function QYEGKT_fake_script() -- KeySystemFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(QYEGKT_fake_script)()
-local function FBEWSUF_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(PXMVLBI_fake_script)()
+local function CNNFWB_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	
@@ -512,8 +512,8 @@ local function FBEWSUF_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(FBEWSUF_fake_script)()
-local function JDSYZL_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(CNNFWB_fake_script)()
+local function LNPG_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -532,8 +532,8 @@ local function JDSYZL_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(JDSYZL_fake_script)()
-local function QSBZYV_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(LNPG_fake_script)()
+local function GABLQZJ_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	
@@ -565,8 +565,8 @@ local function QSBZYV_fake_script() -- TextButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(QSBZYV_fake_script)()
-local function QDLDG_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(GABLQZJ_fake_script)()
+local function LDKTDFO_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	
@@ -647,8 +647,8 @@ local function QDLDG_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(QDLDG_fake_script)()
-local function YYDYK_fake_script() -- ScriptFrame.drag 
+coroutine.wrap(LDKTDFO_fake_script)()
+local function SRWG_fake_script() -- ScriptFrame.drag 
 	local script = Instance.new('LocalScript', ScriptFrame)
 
 	local UI = script.Parent
@@ -709,8 +709,8 @@ local function YYDYK_fake_script() -- ScriptFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(YYDYK_fake_script)()
-local function OBPR_fake_script() -- InfoButton.LocalScript 
+coroutine.wrap(SRWG_fake_script)()
+local function PPRXQMY_fake_script() -- InfoButton.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton)
 
 	
@@ -755,8 +755,8 @@ local function OBPR_fake_script() -- InfoButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(OBPR_fake_script)()
-local function STIEC_fake_script() -- MinimizeButton.LocalScript 
+coroutine.wrap(PPRXQMY_fake_script)()
+local function EEERMZ_fake_script() -- MinimizeButton.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton)
 
 	
@@ -771,17 +771,28 @@ local function STIEC_fake_script() -- MinimizeButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(STIEC_fake_script)()
-local function WOFCYGP_fake_script() -- AutoResetButton.LocalScript 
+coroutine.wrap(EEERMZ_fake_script)()
+local function DPKIYXC_fake_script() -- AutoResetButton.LocalScript 
 	local script = Instance.new('LocalScript', AutoResetButton)
 
 	local button = script.Parent
 	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
 	local player = Players.LocalPlayer
 	
+	-- Auto Reset and Stuck System
 	local autoResetEnabled = false
 	local connection
 	local characterAddedConnection
+	
+	-- Stuck system variables
+	local stuckPosition = nil
+	local loopConnection = nil
+	
+	------------------------------------------------
+	-- Helper Functions
+	------------------------------------------------
 	
 	-- Freeze player movement
 	local function disableMovement()
@@ -805,24 +816,54 @@ local function WOFCYGP_fake_script() -- AutoResetButton.LocalScript
 		end
 	end
 	
-	-- Main AutoReset toggle
+	-- Start Stuck Loop (keeps player at same position)
+	local function startStuckLoop()
+		if loopConnection then
+			loopConnection:Disconnect()
+		end
+	
+		loopConnection = RunService.Heartbeat:Connect(function()
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and stuckPosition then
+				player.Character:MoveTo(stuckPosition)
+			end
+		end)
+	end
+	
+	-- Stop the stuck loop
+	local function stopStuckLoop()
+		if loopConnection then
+			loopConnection:Disconnect()
+			loopConnection = nil
+		end
+	end
+	
+	------------------------------------------------
+	-- Main AutoReset + Stuck Toggle
+	------------------------------------------------
 	local function toggleAutoReset()
 		autoResetEnabled = not autoResetEnabled
 	
 		if autoResetEnabled then
 			button.Text = "AutoReset: ON"
 	
+			-- Save player position when activated
+			local char = player.Character
+			if char and char:FindFirstChild("HumanoidRootPart") then
+				stuckPosition = char.HumanoidRootPart.Position
+				startStuckLoop()
+			end
+	
+			-- Function to handle humanoid setup
 			local function setupHumanoid(humanoid)
-				-- Disconnect old connection if any
 				if connection then
 					connection:Disconnect()
 				end
 	
 				connection = humanoid.HealthChanged:Connect(function(health)
 					if autoResetEnabled and health < humanoid.MaxHealth then
-						-- Auto reset (kill player)
+						-- Instantly kill (auto-reset)
 						humanoid.Health = 0
-						disableMovement() -- disable movement when reset
+						disableMovement()
 					end
 				end)
 	
@@ -831,7 +872,7 @@ local function WOFCYGP_fake_script() -- AutoResetButton.LocalScript
 				end)
 			end
 	
-			-- Setup for current character
+			-- Setup current character
 			if player.Character then
 				local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
 				if humanoid then
@@ -839,21 +880,23 @@ local function WOFCYGP_fake_script() -- AutoResetButton.LocalScript
 				end
 			end
 	
-			-- Setup again when the player respawns
+			-- Handle respawn
 			if characterAddedConnection then
 				characterAddedConnection:Disconnect()
 			end
 	
 			characterAddedConnection = player.CharacterAdded:Connect(function(char)
 				local humanoid = char:WaitForChild("Humanoid")
-				enableMovement() -- enable movement again when respawned
+				enableMovement()
+				stuckPosition = nil -- reset saved position on new spawn
+				stopStuckLoop()
 				setupHumanoid(humanoid)
 			end)
 	
 		else
 			button.Text = "AutoReset: OFF"
 	
-			-- Disconnect all connections
+			-- Disconnect everything
 			if connection then
 				connection:Disconnect()
 				connection = nil
@@ -863,17 +906,21 @@ local function WOFCYGP_fake_script() -- AutoResetButton.LocalScript
 				characterAddedConnection = nil
 			end
 	
-			enableMovement() -- just in case movement was disabled
+			stuckPosition = nil
+			stopStuckLoop()
+			enableMovement()
 		end
 	end
 	
+	------------------------------------------------
+	-- Setup Button
+	------------------------------------------------
 	button.MouseButton1Click:Connect(toggleAutoReset)
-	
 	button.Text = "AutoReset: OFF"
 	
 end
-coroutine.wrap(WOFCYGP_fake_script)()
-local function XFFVKWX_fake_script() -- SetSpawnButton.LocalScript 
+coroutine.wrap(DPKIYXC_fake_script)()
+local function RZMOOU_fake_script() -- SetSpawnButton.LocalScript 
 	local script = Instance.new('LocalScript', SetSpawnButton)
 
 	local button = script.Parent
@@ -932,8 +979,8 @@ local function XFFVKWX_fake_script() -- SetSpawnButton.LocalScript
 	button.MouseButton1Click:Connect(toggleStuck)
 	
 end
-coroutine.wrap(XFFVKWX_fake_script)()
-local function SHMYH_fake_script() -- OptimizationButton.LocalScript 
+coroutine.wrap(RZMOOU_fake_script)()
+local function ECPJ_fake_script() -- OptimizationButton.LocalScript 
 	local script = Instance.new('LocalScript', OptimizationButton)
 
 	local button = script.Parent
@@ -1020,8 +1067,8 @@ local function SHMYH_fake_script() -- OptimizationButton.LocalScript
 	
 	--- PROPERTY OF INF YIELD .. 2/3..2.2.12/.2.1..
 end
-coroutine.wrap(SHMYH_fake_script)()
-local function FSNQB_fake_script() -- RejoinButton.LocalScript 
+coroutine.wrap(ECPJ_fake_script)()
+local function YHWOAI_fake_script() -- RejoinButton.LocalScript 
 	local script = Instance.new('LocalScript', RejoinButton)
 
 	local button = script.Parent
@@ -1036,8 +1083,8 @@ local function FSNQB_fake_script() -- RejoinButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(FSNQB_fake_script)()
-local function IBDDS_fake_script() -- TpButton.LocalScript 
+coroutine.wrap(YHWOAI_fake_script)()
+local function HIUMP_fake_script() -- TpButton.LocalScript 
 	local script = Instance.new('LocalScript', TpButton)
 
 	
@@ -1055,8 +1102,8 @@ local function IBDDS_fake_script() -- TpButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(IBDDS_fake_script)()
-local function VQGWH_fake_script() -- TextLabel_5.LocalScript 
+coroutine.wrap(HIUMP_fake_script)()
+local function TYVPXZO_fake_script() -- TextLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local textLabel = script.Parent
@@ -1112,4 +1159,4 @@ local function VQGWH_fake_script() -- TextLabel_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(VQGWH_fake_script)()
+coroutine.wrap(TYVPXZO_fake_script)()
