@@ -1,5 +1,4 @@
 
-
 local fzhubpcv2 = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -10,34 +9,32 @@ local UICorner_3 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
 local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
-local TextButton_2 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
 local ImageButton = Instance.new("ImageButton")
 local ScriptFrame = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local FarmKillsButton = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local InfoButton = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local MinimizeButton = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local TitleImage = Instance.new("ImageLabel")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local AutoResetButton = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local SetSpawnButton = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local OptimizationButton = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local RejoinButton = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local TpButton = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local InformationFrame = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
 local TextLabel_4 = Instance.new("TextLabel")
@@ -68,7 +65,7 @@ KeySystemFrame.Parent = MainFrame
 KeySystemFrame.BackgroundColor3 = Color3.fromRGB(20, 17, 28)
 KeySystemFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KeySystemFrame.BorderSizePixel = 0
-KeySystemFrame.Position = UDim2.new(0.210262164, 0, 0.0965447128, 0)
+KeySystemFrame.Position = UDim2.new(0.223368689, 0, 0.285569102, 0)
 KeySystemFrame.Size = UDim2.new(0, 374, 0, 210)
 
 UICorner_2.Parent = KeySystemFrame
@@ -77,8 +74,8 @@ TextButton.Parent = KeySystemFrame
 TextButton.BackgroundColor3 = Color3.fromRGB(93, 38, 162)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.518716574, 0, 0.647619069, 0)
-TextButton.Size = UDim2.new(0, 142, 0, 47)
+TextButton.Position = UDim2.new(0.0909090936, 0, 0.647619069, 0)
+TextButton.Size = UDim2.new(0, 305, 0, 47)
 TextButton.Font = Enum.Font.SourceSansBold
 TextButton.Text = "Submit"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -113,19 +110,6 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 21.000
 TextLabel.TextWrapped = true
 
-TextButton_2.Parent = KeySystemFrame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(93, 38, 162)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.101604275, 0, 0.647619069, 0)
-TextButton_2.Size = UDim2.new(0, 139, 0, 47)
-TextButton_2.Font = Enum.Font.SourceSansBold
-TextButton_2.Text = "Get Key"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextSize = 24.000
-
-UICorner_5.Parent = TextButton_2
-
 ImageButton.Parent = fzhubpcv2
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -144,7 +128,7 @@ ScriptFrame.Position = UDim2.new(0.396078765, 0, 0.147368401, 0)
 ScriptFrame.Size = UDim2.new(0, 419, 0, 478)
 ScriptFrame.Visible = false
 
-UICorner_6.Parent = ScriptFrame
+UICorner_5.Parent = ScriptFrame
 
 Title.Name = "Title"
 Title.Parent = ScriptFrame
@@ -172,7 +156,7 @@ FarmKillsButton.Text = "Farm Kills"
 FarmKillsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 FarmKillsButton.TextSize = 19.000
 
-UICorner_7.Parent = FarmKillsButton
+UICorner_6.Parent = FarmKillsButton
 
 InfoButton.Name = "InfoButton"
 InfoButton.Parent = ScriptFrame
@@ -186,7 +170,7 @@ InfoButton.Text = "Information"
 InfoButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 InfoButton.TextSize = 19.000
 
-UICorner_8.Parent = InfoButton
+UICorner_7.Parent = InfoButton
 
 MinimizeButton.Name = "MinimizeButton"
 MinimizeButton.Parent = ScriptFrame
@@ -201,7 +185,7 @@ MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 MinimizeButton.TextSize = 37.000
 MinimizeButton.TextWrapped = true
 
-UICorner_9.Parent = MinimizeButton
+UICorner_8.Parent = MinimizeButton
 
 TitleImage.Name = "TitleImage"
 TitleImage.Parent = ScriptFrame
@@ -212,7 +196,7 @@ TitleImage.Position = UDim2.new(0.340403855, 0, 0.427153766, 0)
 TitleImage.Size = UDim2.new(0, 133, 0, -124)
 TitleImage.Image = "rbxassetid://132782852102479"
 
-UICorner_10.Parent = TitleImage
+UICorner_9.Parent = TitleImage
 
 AutoResetButton.Name = "AutoResetButton"
 AutoResetButton.Parent = ScriptFrame
@@ -226,7 +210,7 @@ AutoResetButton.Text = "AutoReset: OFF"
 AutoResetButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 AutoResetButton.TextSize = 18.000
 
-UICorner_11.Parent = AutoResetButton
+UICorner_10.Parent = AutoResetButton
 
 SetSpawnButton.Name = "SetSpawnButton"
 SetSpawnButton.Parent = ScriptFrame
@@ -240,7 +224,7 @@ SetSpawnButton.Text = "Set Spawn"
 SetSpawnButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 SetSpawnButton.TextSize = 18.000
 
-UICorner_12.Parent = SetSpawnButton
+UICorner_11.Parent = SetSpawnButton
 
 OptimizationButton.Name = "OptimizationButton"
 OptimizationButton.Parent = ScriptFrame
@@ -254,7 +238,7 @@ OptimizationButton.Text = "Optimization"
 OptimizationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 OptimizationButton.TextSize = 18.000
 
-UICorner_13.Parent = OptimizationButton
+UICorner_12.Parent = OptimizationButton
 
 RejoinButton.Name = "RejoinButton"
 RejoinButton.Parent = ScriptFrame
@@ -268,7 +252,7 @@ RejoinButton.Text = "Rejoin"
 RejoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 RejoinButton.TextSize = 18.000
 
-UICorner_14.Parent = RejoinButton
+UICorner_13.Parent = RejoinButton
 
 TpButton.Name = "TpButton"
 TpButton.Parent = ScriptFrame
@@ -282,7 +266,7 @@ TpButton.Text = "Teleport"
 TpButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TpButton.TextSize = 18.000
 
-UICorner_15.Parent = TpButton
+UICorner_14.Parent = TpButton
 
 InformationFrame.Name = "InformationFrame"
 InformationFrame.Parent = ScriptFrame
@@ -293,7 +277,7 @@ InformationFrame.Position = UDim2.new(0, 0, 0.166368946, 0)
 InformationFrame.Size = UDim2.new(0, 418, 0, 398)
 InformationFrame.Visible = false
 
-UICorner_16.Parent = InformationFrame
+UICorner_15.Parent = InformationFrame
 
 ImageLabel.Parent = InformationFrame
 ImageLabel.BackgroundColor3 = Color3.fromRGB(23, 21, 31)
@@ -303,7 +287,7 @@ ImageLabel.Position = UDim2.new(0.0265507307, 0, 0.032041464, 0)
 ImageLabel.Size = UDim2.new(0, 70, 0, 63)
 ImageLabel.Image = "rbxassetid://132782852102479"
 
-UICorner_17.Parent = ImageLabel
+UICorner_16.Parent = ImageLabel
 
 TextLabel_2.Parent = InformationFrame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(23, 21, 31)
@@ -376,7 +360,7 @@ TextLabel_5.TextSize = 27.000
 
 -- Scripts:
 
-local function PXMVLBI_fake_script() -- KeySystemFrame.drag 
+local function AIFNHV_fake_script() -- KeySystemFrame.drag 
 	local script = Instance.new('LocalScript', KeySystemFrame)
 
 	local UI = script.Parent
@@ -437,8 +421,8 @@ local function PXMVLBI_fake_script() -- KeySystemFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(PXMVLBI_fake_script)()
-local function CNNFWB_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(AIFNHV_fake_script)()
+local function TIISWND_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	
@@ -512,8 +496,8 @@ local function CNNFWB_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(CNNFWB_fake_script)()
-local function LNPG_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(TIISWND_fake_script)()
+local function RQJPKE_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -532,41 +516,8 @@ local function LNPG_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(LNPG_fake_script)()
-local function GABLQZJ_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
-
-	
-	
-	local textButton = script.Parent
-	local textToCopy = "https://discord.gg/ThyCc86tjp" -- The text that will be copied
-	
-	textButton.MouseButton1Click:Connect(function()
-		local success, err = pcall(function()
-			-- Prompt player to copy the string
-			game:GetService("StarterGui"):SetCore("PromptCopyString", textToCopy)
-		end)
-	
-		if success then
-			-- Show notification popup
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "SYSTEM SAYS:",
-				Text = "Succesfully Copied '" .. textToCopy .. "'the link was copied into your clipboard.",
-				Duration = 3
-			})
-		else
-			-- Show error if something goes wrong
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "Error",
-				Text = "Could not copy text: " .. tostring(err),
-				Duration = 3
-			})
-		end
-	end)
-	
-end
-coroutine.wrap(GABLQZJ_fake_script)()
-local function LDKTDFO_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(RQJPKE_fake_script)()
+local function HMUWAK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	
@@ -647,8 +598,8 @@ local function LDKTDFO_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(LDKTDFO_fake_script)()
-local function SRWG_fake_script() -- ScriptFrame.drag 
+coroutine.wrap(HMUWAK_fake_script)()
+local function HFLOTCB_fake_script() -- ScriptFrame.drag 
 	local script = Instance.new('LocalScript', ScriptFrame)
 
 	local UI = script.Parent
@@ -709,8 +660,8 @@ local function SRWG_fake_script() -- ScriptFrame.drag
 	
 	game:GetService("RunService").Heartbeat:Connect(Update)
 end
-coroutine.wrap(SRWG_fake_script)()
-local function PPRXQMY_fake_script() -- InfoButton.LocalScript 
+coroutine.wrap(HFLOTCB_fake_script)()
+local function GIMF_fake_script() -- InfoButton.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton)
 
 	
@@ -755,8 +706,8 @@ local function PPRXQMY_fake_script() -- InfoButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(PPRXQMY_fake_script)()
-local function EEERMZ_fake_script() -- MinimizeButton.LocalScript 
+coroutine.wrap(GIMF_fake_script)()
+local function BQOEJL_fake_script() -- MinimizeButton.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton)
 
 	
@@ -771,8 +722,8 @@ local function EEERMZ_fake_script() -- MinimizeButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(EEERMZ_fake_script)()
-local function DPKIYXC_fake_script() -- AutoResetButton.LocalScript 
+coroutine.wrap(BQOEJL_fake_script)()
+local function AATJSD_fake_script() -- AutoResetButton.LocalScript 
 	local script = Instance.new('LocalScript', AutoResetButton)
 
 	local button = script.Parent
@@ -887,9 +838,24 @@ local function DPKIYXC_fake_script() -- AutoResetButton.LocalScript
 	
 			characterAddedConnection = player.CharacterAdded:Connect(function(char)
 				local humanoid = char:WaitForChild("Humanoid")
-				enableMovement()
-				stuckPosition = nil -- reset saved position on new spawn
-				stopStuckLoop()
+				local root = char:WaitForChild("HumanoidRootPart")
+	
+				------------------------------------------------
+				-- 🧊 NEW SECTION: Freeze on reset, then unfreeze
+				------------------------------------------------
+				task.wait(0.5)
+				stuckPosition = root.Position
+				disableMovement()
+				startStuckLoop()
+	
+				-- Auto-unfreeze after a few seconds
+				local freezeDuration = 3 -- ⏳ Change this number if you want longer/shorter freeze
+				task.delay(freezeDuration, function()
+					stopStuckLoop()
+					enableMovement()
+				end)
+				------------------------------------------------
+	
 				setupHumanoid(humanoid)
 			end)
 	
@@ -919,8 +885,8 @@ local function DPKIYXC_fake_script() -- AutoResetButton.LocalScript
 	button.Text = "AutoReset: OFF"
 	
 end
-coroutine.wrap(DPKIYXC_fake_script)()
-local function RZMOOU_fake_script() -- SetSpawnButton.LocalScript 
+coroutine.wrap(AATJSD_fake_script)()
+local function VTAK_fake_script() -- SetSpawnButton.LocalScript 
 	local script = Instance.new('LocalScript', SetSpawnButton)
 
 	local button = script.Parent
@@ -979,13 +945,14 @@ local function RZMOOU_fake_script() -- SetSpawnButton.LocalScript
 	button.MouseButton1Click:Connect(toggleStuck)
 	
 end
-coroutine.wrap(RZMOOU_fake_script)()
-local function ECPJ_fake_script() -- OptimizationButton.LocalScript 
+coroutine.wrap(VTAK_fake_script)()
+local function ABRFFC_fake_script() -- OptimizationButton.LocalScript 
 	local script = Instance.new('LocalScript', OptimizationButton)
 
 	local button = script.Parent
-	local player = game:GetService("Players").LocalPlayer
+	local Players = game:GetService("Players")
 	local StarterGui = game:GetService("StarterGui")
+	local player = Players.LocalPlayer
 	
 	local clicked = false
 	
@@ -993,6 +960,7 @@ local function ECPJ_fake_script() -- OptimizationButton.LocalScript
 		if clicked then return end
 		clicked = true
 	
+		-- Delete parts inside workspace.Map
 		local map = workspace:FindFirstChild("Map")
 		if map then
 			local trees = map:FindFirstChild("Trees")
@@ -1010,65 +978,28 @@ local function ECPJ_fake_script() -- OptimizationButton.LocalScript
 			end
 		end
 	
+		-- Delete the "Thrown" folder in workspace
+		local thrownFolder = workspace:FindFirstChild("Thrown")
+		if thrownFolder then
+			thrownFolder:Destroy()
+		end
 	
+		-- Change button properties
 		button.Text = "Optimization"
 		button.Active = false
 		button.AutoButtonColor = false
 	
-	
+		-- Send notification
 		StarterGui:SetCore("SendNotification", {
 			Title = "SYSTEM SAYS:",
-			Text = "Succesfully made your game smoother !", 
-			Duration = 4, --
+			Text = "Successfully made your game smoother !",
+			Duration = 4
 		})
 	end)
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	--- PROPERTY OF INF YIELD .. 2/3..2.2.12/.2.1..
 end
-coroutine.wrap(ECPJ_fake_script)()
-local function YHWOAI_fake_script() -- RejoinButton.LocalScript 
+coroutine.wrap(ABRFFC_fake_script)()
+local function MKAGSR_fake_script() -- RejoinButton.LocalScript 
 	local script = Instance.new('LocalScript', RejoinButton)
 
 	local button = script.Parent
@@ -1083,8 +1014,8 @@ local function YHWOAI_fake_script() -- RejoinButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(YHWOAI_fake_script)()
-local function HIUMP_fake_script() -- TpButton.LocalScript 
+coroutine.wrap(MKAGSR_fake_script)()
+local function TZLGWOW_fake_script() -- TpButton.LocalScript 
 	local script = Instance.new('LocalScript', TpButton)
 
 	
@@ -1102,8 +1033,8 @@ local function HIUMP_fake_script() -- TpButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(HIUMP_fake_script)()
-local function TYVPXZO_fake_script() -- TextLabel_5.LocalScript 
+coroutine.wrap(TZLGWOW_fake_script)()
+local function ESHFVXL_fake_script() -- TextLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local textLabel = script.Parent
@@ -1159,4 +1090,4 @@ local function TYVPXZO_fake_script() -- TextLabel_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(TYVPXZO_fake_script)()
+coroutine.wrap(ESHFVXL_fake_script)()
